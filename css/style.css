@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, rgba(112, 110, 110, 0.671), rgba(247, 195, 221, 0.486)), url("../images/yoga.jpg");
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0%, 100% 84%, 0% 100%);
+}
+
+.text-box {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.1rem;
+    color: rgb(51, 50, 50);
+    animation-name: moveinleft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveinleft {
+    0% {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.45rem;
+    color: rgb(29, 27, 27);
+    animation-name: moveinright;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveinright {
+    0% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    margin: 2rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-transform: capitalize;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(128, 128, 128, 0.466);
+    color: rgba(255, 255, 255, 0.897);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    animation-name: moveinbottom;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveinbottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
